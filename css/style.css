@@ -64,16 +64,12 @@ header img.logo {
   height: 1.125rem;
 }
 
-
-
 .mobile-nav {
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
 }
-
-
 
 .desktop-nav ul {
   display: flex;
