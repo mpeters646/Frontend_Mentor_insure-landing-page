@@ -1,0 +1,131 @@
+/* Fonts ( 1rem = 16px ) */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+
+/* Variables */
+:root {
+  --darkViolet: hsl(256, 26%, 20%);
+  --grayishBlue: hsl(216, 30%, 68%);
+  --veryDarkViolet: hsl(270, 9%, 17%);
+  --darkGrayishViolet: hsl(273, 4%, 51%);
+  --veryLightGray: hsl(0, 0%, 98%);
+}
+
+/* General styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'DM Serif Display', serif;
+}
+
+.container {
+  max-width: 78%;
+  margin: 0 auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+header img.logo {
+  width: 6.875rem;
+  height: 1.125rem;
+}
+
+.mobile-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.desktop-nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+.desktop-nav ul li {
+  margin-top: 14px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.desktop-nav ul li:not(:last-child) {
+  margin-right: 1.5rem;
+  color: var(--grayishBlue);
+}
+
+.desktop-nav ul li:not(:last-child):hover {
+  color: var(--veryDarkViolet);
+  font-weight: 700;
+}
+
+.desktop-nav ul .cta {
+  padding: 14px 30px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.desktop-nav ul .cta:hover {
+  background-color: #000;
+  color: #fff;
+  font-weight: 700;
+}
+
+
+/* Footer styles */
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Screen Size styles */
+@media (max-width: 967px) {
+  .hide-on-mobile {
+    max-width: 1023px;
+    display: none;
+  }
+}
+
+@media (min-width: 968px) {
+  .hide-on-desktop {
+    display: none;
+  }
+}
