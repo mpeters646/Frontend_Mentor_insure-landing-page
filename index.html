@@ -17,11 +17,10 @@
 </head>
 
 <body>
-
-  <div class="container">
-    <header>
-      <a href="#">
-        <img class="logo" src="/images/logo.svg" alt="Logo Insure">
+  <header>
+    <div class="container">
+      <a href="#" class="logo">
+        <img src="/images/logo.svg" alt="Logo Insure">
       </a>
 
       <nav class="mobile-nav hide-on-desktop">
@@ -29,14 +28,25 @@
       </nav>
       <nav class="desktop-nav hide-on-mobile">
         <ul>
-          <li><a href="#"></a>How we work</li>
-          <li><a href="#"></a>Blog</li>
-          <li><a href="#"></a>Account</li>
+          <li><a href="#">How we work</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Account</a></li>
           <button class="cta">View plans</button>
         </ul>
       </nav>
-    </header>
-  </div>
+    </div>
+
+    <div id="navOverlay" class="overlay">
+      <div class="overlay-content">
+        <a href="#">How we work</a>
+        <a href="#">Blog</a>
+        <a href="#">Account</a>
+        <button class="cta">View plans</button>
+
+        <img class="bg-nav" src="./images/bg-pattern-mobile-nav.svg" alt="">
+      </div>
+    </div>
+  </header>
 
 
   <!-- 
