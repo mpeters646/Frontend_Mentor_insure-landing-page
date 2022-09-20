@@ -164,7 +164,7 @@ header img.logo {
   align-items: center;
   position: relative;
   height: 31.25rem;
-  background-color: var(--veryDarkViolet);
+  background-color: var(--darkViolet);
 }
 
 .intro-text h1 {
@@ -182,12 +182,19 @@ header img.logo {
 .intro-left {
   position: absolute;
   top: 0;
+  left: 0;
 }
 
 .intro-right {
   position: absolute;
   bottom: -35%;
   right: 0;
+}
+
+
+/* How We Work */
+.how-we-work {
+  height: 1800px;
 }
 
 
@@ -226,7 +233,8 @@ header img.logo {
     display: none;
   }
 
-  .container {
+  .container,
+  .intro .container {
     width: 75%;
     max-width: 695rem;
   }
@@ -281,7 +289,60 @@ header img.logo {
   }
 
 
-  /* Info section styles */
+  /* Intro section styles */
+  .intro {
+    position: relative;
+    height: 600px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background: url(../images/bg-pattern-intro-right-desktop.svg) top right no-repeat, url(../images/bg-pattern-intro-left-desktop.svg) bottom -330px left no-repeat;
+    background-color: var(--darkViolet);
+  }
 
+  .intro-text {
+    position: absolute;
+    top: 0;
+    height: 37.5rem;
+    width: 75%;
+    background-color: transparent;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .intro-text h1 {
+    color: var(--veryLightGray);
+    text-align: left;
+    padding-top: 30%;
+  }
+
+  .intro-text p {
+    color: var(--veryLightGray);
+    text-align: left;
+    padding: 1.5rem 0;
+  }
+
+  .intro-img {
+    height: 100%;
+    position: absolute;
+    top: 130px;
+    width: 540px;
+    background: url('../images/image-intro-desktop.jpg') left/100% no-repeat;
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  .intro button {
+    width: 25%;
+    padding: 0.75rem 1.625rem;
+  }
+
+  .how-we-work {
+    height: 1350px;
+    background: url(../images/bg-pattern-intro-left-desktop.svg) top -174px left no-repeat;
+    z-index: 10;
+  }
 
 }
