@@ -12,6 +12,7 @@
   --veryLightGray: hsl(0, 0%, 98%);
 }
 
+
 /* General styles */
 *,
 *::before,
@@ -77,42 +78,89 @@ header img.logo {
   cursor: pointer;
 }
 
-.desktop-nav ul {
-  display: flex;
-  justify-content: space-between;
+
+/* Overlay styles */
+.overlay {
+  display: none;
+  max-height: 586px;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 80px;
+  left: 0;
+  background-color: var(--veryDarkViolet);
+  overflow-y: hidden;
+  transition: 0.5s;
 }
 
-.desktop-nav ul li {
-  margin-top: 0.875rem;
-  align-items: center;
-  justify-content: center;
-  color: var(--grayishBlue);
-  cursor: pointer;
+.overlay-content {
+  position: relative;
+  top: 0;
+  width: 100%;
+  text-align: center;
+  margin-top: 27px;
 }
 
-.desktop-nav ul li:hover {
-  color: var(--darkViolet);
-  font-weight: 700;
+.overlay a {
+  padding: 23px 8px;
+  text-decoration: none;
+  color: var(--veryLightGray);
+  display: block;
+  transition: 0.3s;
 }
 
-.desktop-nav ul li:not(:last-child) {
-  margin-right: 1.5rem;
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
 }
 
-
-
-.desktop-nav ul .cta {
+.overlay .cta {
+  margin-top: 10px;
   padding: 0.875rem 1.875rem;
-  font-weight: 700;
-  color: var(--darkViolet);
+  font-family: 'Karla', sans-serif;
+  font-size: 16px;
+  color: var(--veryLightGray);
   background-color: transparent;
+  border-color: var(--veryLightGray);
   cursor: pointer;
 }
 
-.desktop-nav ul .cta:hover {
-  background-color: var(--darkViolet);
+.overlay .cta:hover {
+  background-color: #000;
   color: var(--veryLightGray);
   font-weight: 700;
+}
+
+.overlay img.bg-nav {
+  width: 100%;
+  position: absolute;
+  top: 340px;
+  left: 0;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {
+    overflow-y: auto;
+  }
+
+  .overlay a {
+    font-size: 20px
+  }
+
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+/* Info section styles */
+.info-img {
+  height: 100vw;
+  background: url('../images/image-intro-mobile.jpg') left/100% no-repeat;
+  background-color: var(--veryDarkViolet);
 }
 
 
@@ -133,94 +181,73 @@ header img.logo {
 
 /* Screen Size styles */
 @media (max-width: 967px) {
+
+  /* General styles */
   .hide-on-mobile {
     display: none;
   }
 
-  /* overlay */
-  .overlay {
+
+}
+
+
+@media (min-width: 968px) {
+
+  /* General styles */
+  .hide-on-desktop {
     display: none;
-    max-height: 586px;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-    z-index: 10;
-    top: 80px;
-    left: 0;
-    /* background-color: rgb(0, 0, 0); */
-    /* background-color: rgba(0, 0, 0, 0.9); */
-    background-color: var(--veryDarkViolet);
-    overflow-y: hidden;
-    /* overflow: hidden; */
-    transition: 0.5s;
   }
 
-  .overlay-content {
-    position: relative;
-    top: 0;
-    width: 100%;
-    text-align: center;
-    margin-top: 27px;
+  .container {
+    width: 75%;
+    max-width: 1112px;
   }
 
-  .overlay a {
-    padding: 23px 8px;
-    text-decoration: none;
-    color: var(--veryLightGray);
-    display: block;
-    transition: 0.3s;
+  /* Header styles */
+  .desktop-nav ul {
+    display: flex;
+    justify-content: space-between;
   }
 
-  .overlay a:hover,
-  .overlay a:focus {
-    color: #f1f1f1;
-  }
-
-  .overlay .cta {
-    margin-top: 10px;
-    padding: 0.875rem 1.875rem;
-    font-family: 'Karla', sans-serif;
-    font-size: 16px;
-    color: var(--veryLightGray);
-    background-color: transparent;
-    border-color: var(--veryLightGray);
+  .desktop-nav ul li {
+    margin-top: 0.875rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--grayishBlue);
     cursor: pointer;
   }
 
-  .overlay .cta:hover {
-    background-color: #000;
+  .desktop-nav ul li:hover {
+    color: var(--darkViolet);
+    font-weight: 700;
+  }
+
+  .desktop-nav ul li:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+
+  .desktop-nav ul .cta {
+    padding: 0.875rem 1.875rem;
+    font-weight: 700;
+    color: var(--darkViolet);
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .desktop-nav ul .cta:hover {
+    background-color: var(--darkViolet);
     color: var(--veryLightGray);
     font-weight: 700;
   }
 
-  .overlay img.bg-nav {
-    width: 100%;
-    position: absolute;
-    top: 340px;
-    left: 0;
-  }
 
-  @media screen and (max-height: 450px) {
-    .overlay {
-      overflow-y: auto;
-    }
-
-    .overlay a {
-      font-size: 20px
-    }
-
-    .overlay .closebtn {
-      font-size: 40px;
-      top: 15px;
-      right: 35px;
-    }
-  }
-}
-
-@media (min-width: 968px) {
-  .hide-on-desktop {
+  /* Overlay styles */
+  .overlay {
     display: none;
   }
+
+
+  /* Info section styles */
 
 
 }
